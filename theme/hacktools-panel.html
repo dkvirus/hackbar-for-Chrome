@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+	<div class="container-fluid" style="padding-top: 5px;">
+		<nav class="navbar navbar-default">
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav" tabindex="-1" id="menu_btn">
+					<li class="dropdown">
+						<a href="#" tabindex="-1" class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-haspopup="true" aria-expanded="false">Encryption <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" id='md5'><img src="img/encryption.png"/> MD51</a></li>
+							<li><a href="#" id='sha1'><img src="img/encryption.png"/> SHA-1</a></li>
+							<li><a href="#" id='sha256'><img src="img/encryption.png"/> SHA-256</a></li>
+							<li><a href="#" id='rot13'><img src="img/encryption_weak.png"/> ROT13</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" tabindex="-1" class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-haspopup="true" aria-expanded="false">Encoding <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" id='base64_encode'><img src="img/uue.png"/> Base64 编码</a></li>
+							<li><a href="#" id='base64_decode'><img src="img/uud.png"/> Base64 解码</a></li>
+							<li><a href="#" id='url_encode'><img src="img/urle.png"/> URL 编码</a></li>
+							<li><a href="#" id='url_decode'><img src="img/urld.png"/> URL 解码</a></li>
+							<li><a href="#" id='ascii_to_string'><img src="img/hexencode.png"/> Ascii转字符串</a></li>
+							<li><a href="#" id='string_to_ascii'><img src="img/hexdecode.png"/> 字符串转Ascii</a></li>
+							<li><a href="#" id='hex_encode'><img src="img/hexencode.png"/> Hex 编码</a></li>
+							<li><a href="#" id='hex_decode'><img src="img/hexdecode.png"/> Hex 解码</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" tabindex="-1" class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-haspopup="true" aria-expanded="false">SQL <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" id='sql_mysql_updatexml'><img src="img/mysql.png"/> MySQL 报错注入 updatexml()</a></li>
+							<li><a href="#" id='sql_mysql_extractvalue'><img src="img/mysql.png"/> MySQL 报错注入 extractvalue()</a></li>
+							<li><a href="#" id='sql_mysql_tablename'><img src="img/mysql.png"/> MySQL 查表名</a></li>
+							<li><a href="#" id='sql_mysql_columnname'><img src="img/mysql.png"/> MySQL 查字段名</a></li>
+							<li><a href="#" id='sql_mysql_blind_length'><img src="img/mysql.png"/> MySQL 布尔盲注 字段长度</a></li>
+							<li><a href="#" id='sql_mysql_blind_char'><img src="img/mysql.png"/> MySQL 布尔盲注 字段字符</a></li>
+							<li><a href="#" id='sql_mysql_blind_timer'><img src="img/mysql.png"/> MySQL 延时盲注</a></li>
+							<li><a href="#" id='sql_oracle_ctxsys.drithsx.sn'><img src="img/database.png"/> Oracle 报错注入 ctxsys.drithsx.sn()</a></li>
+							<li><a href="#" id='sql_oracle_tablename'><img src="img/database.png"/> Oracle 查表名</a></li>
+							<li><a href="#" id='sql_oracle_columnname'><img src="img/database.png"/> Oracle 查字段名</a></li>  
+							<li><a href="#" id='sql_oracle_pagination'><img src="img/database.png"/> Oracle 分页查询</a></li>
+							<li><a href="#" id='sql_union_statement'><img src="img/database.png"/> Union Select Statment</a></li>
+							<!-- <li><a href="#" id='sql_mysql_char'><img src="img/mysql.png"/> MySQL CHAR()</a></li>
+							<li><a href="#" id='sql_basic_info_column'><img src="img/mysql.png"/> Basic info column</a></li>
+							<li><a href="#" id='sql_convert_utf8'><img src="img/database_convert.png"/> Convert using UTF-8</a></li>
+							<li><a href="#" id='sql_convert_latin1'><img src="img/database_convert.png"/> Convert using Latin-1</a></li>
+							<li><a href="#" id='sql_mssql_char'><img src="img/database.png"/> MSQL CHAR()</a></li>
+							<li><a href="#" id='sql_oracle_char'><img src="img/database.png"/> Oracle CHAR()</a></li>
+							<li><a href="#" id='sql_spaces_to_inline_comments'><img src="img/database.png"/> Spaces to inline comments</a></li> -->
+						</ul>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" tabindex="-1" class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-haspopup="true" aria-expanded="false">XSS <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" id='xss_string_from_charcode'><img src="img/xss.png"/> String.fromCharCode</a>
+							</li>
+							<li><a href="#" id='xss_html_characters'><img src="img/xss.png"/> HTML Characters</a></li>
+							<li><a href="#" id='xss_alert'><img src="img/xss_alert.png"/> XSS Alert</a></li>
+						</ul>
+					</li>
+
+					<!-- <li class="dropdown" id="lfi">
+						<a href="#" tabindex="-1" class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-haspopup="true" aria-expanded="false">LFI <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-submenu">
+								<a href="#">Basic</span></a>
+								<ul class="dropdown-menu">
+									<li class="dropdown-submenu">
+										<a href="#">Basic LF</span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#" class="lfi_data">?page=../../../etc/passwd</a></li>
+										</ul>
+									</li>
+
+									<li class="dropdown-submenu">
+										<a href="#">Null byte</span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#" class="lfi_data">?page=../../../etc/passwd%00</a></li>
+										</ul>
+									</li>
+
+									<li class="dropdown-submenu">
+										<a href="#">Double encoding</span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#" class="lfi_data">?page=%252e%252e%252fetc%252fpasswd</a></li>
+											<li><a href="#" class="lfi_data">?page=%252e%252e%252fetc%252fpasswd%00</a></li>
+										</ul>
+									</li>
+
+									<li class="dropdown-submenu">
+										<a href="#">Path and dot truncation</span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#" class="lfi_data">?page=../../../etc/passwd............[ADD MORE]</a></li>
+											<li><a href="#" class="lfi_data">?page=../../../etc/passwd\.\.\.\.\.\.[ADD MORE]</a></li>
+											<li><a href="#" class="lfi_data">?page=../../../etc/passwd/./././././.[ADD MORE]</a></li>
+											<li><a href="#" class="lfi_data">?page=../../../[ADD MORE]../../../../etc/passwd</a></li>
+										</ul>
+									</li>
+
+									<li class="dropdown-submenu">
+										<a href="#">Filter bypass tricks</span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#" class="lfi_data">?page=....//....//etc/passwd</a></li>
+											<li><a href="#" class="lfi_data">?page=..///////..////..//////etc/passwd</a></li>
+											<li><a href="#" class="lfi_data">?page=../../../etc/passwd/./././././.[ADD MORE]</a></li>
+											<li><a href="#" class="lfi_data">?page=/%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../%5C../etc/passwd</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+
+							<li class="dropdown-submenu">
+								<a href="#">Using wrappers</span></a>
+								<ul class="dropdown-menu">
+									<li class="dropdown-submenu">
+										<a href="#">php://filter</span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#" class="lfi_data">?page=php://filter/read=string.rot13/resource=index.php</a></li>
+											<li><a href="#" class="lfi_data">?page=php://filter/convert.base64-encode/resource=index.php</a></li>
+											<li><a href="#" class="lfi_data">?page=pHp://FilTer/convert.base64-encode/resource=index.php</a></li>
+										</ul>
+									</li>
+
+									<li class="dropdown-submenu">
+										<a href="#">zip://</span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#" class="lfi_data">?page=zip://shell.jpg%23payload.php</a></li>
+										</ul>
+									</li>
+
+									<li class="dropdown-submenu">
+										<a href="#">data://</span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#" class="lfi_data">?page=data://text/plain;base64,[base64_encode_shell]</a></li>
+										</ul>
+									</li>
+
+									<li class="dropdown-submenu">
+										<a href="#">expect://</span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#" class="lfi_data">?page=expect://id</a></li>
+											<li><a href="#" class="lfi_data">?page=expect://ls</a></li>
+										</ul>
+									</li>
+
+									<li class="dropdown-submenu">
+										<a href="#">input://</span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#" class="lfi_data">?page=php://input | POST DATA: <?php system('id'); ?></a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li> -->
+
+					<!-- <li class="dropdown">
+						<a href="#" tabindex="-1" class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-haspopup="true" aria-expanded="false">XXE <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" id='sql_mysql_char'>Comming soon</a></li>
+						</ul>
+					</li> -->
+
+					<li class="dropdown">
+						<a href="#" tabindex="-1" class="dropdown-toggle" data-toggle="dropdown" role="button"
+						aria-haspopup="true" aria-expanded="false">Other <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#" id='jsonify'><img src="img/addslashes.png"/> Jsonify</a></li>
+							<li><a href="#" id='uppercase'><img src="img/uppercase.png"/> Uppercase</a></li>
+							<li><a href="#" id='lowercase'><img src="img/lowercase.png"/> Lowercase</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<p class="navbar-text"><a href="https://hackbar.herokuapp.com" target="_blank">Help!</a></p>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>
+		<div class="row">
+			<div class="col-md-2 col-lg-1 col-xs-3 col-sm-3">
+				<button class="btn btn-sm btn-block btn-default" id="load_url"><img src="img/load.png"/> Load URL
+				</button>
+				<button class="btn btn-sm btn-block btn-default" id="split_url"><img src="img/split.gif"/> Split URL
+				</button>
+				<button class="btn btn-sm btn-block btn-default" id="execute"><img src="img/web.png"/> Execute
+				</button>
+				<!-- <button class="btn btn-sm btn-block btn-default" id="add-slash">ADD "/"</button> -->
+			</div>
+			<div class="col-md-10 col-lg-11 col-xs-9 col-sm-9">
+				<div class="form-group">
+					<textarea id="url_field" class="form-control" spellcheck="false" placeholder="URL"></textarea>
+				</div>
+				<div class="form-group">
+					<div class="checkbox">
+						<label class="checkbox-inline">
+							<input type="checkbox" id="enable_remark_btn"/> 笔记
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" id="enable_post_btn"/> Post data
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" id="enable_referer_btn"/> Referer
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" id="enable_user_agent_btn"/> User Agent
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" id="enable_cookie_btn"/> Cookies
+						</label>
+						<label class="checkbox-inline">
+							<a id="clear_all">Clear All</a>
+						</label>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="row">
+			<!-- <div class="col-lg-1" id="data_label_block">
+			</div> -->
+
+			<div class="col-lg-3 block">
+				<div class="form-group reamrk_wrapper">
+					<textarea id="remark_data_field" class="form-control" spellcheck="false" placeholder="笔记"></textarea>
+					<a id="remark_data_button">清空</a>
+				</div>
+			</div>
+
+			<div class="col-lg-5 block">
+				<div class="form-group">
+					<textarea id="post_data_field" class="form-control" spellcheck="false" placeholder="POST 数据"></textarea>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="form-group block">
+					<div class="input-group">
+						<div class="input-group-addon"><strong>R</strong></div>
+						<input type="text" class="form-control" id="referer_field" spellcheck="false" placeholder="Referer">
+					</div>
+				</div>
+
+				<div class="form-group block">
+					<div class="input-group">
+						<div class="input-group-addon"><strong>U</strong></div>
+						<input type="text" class="form-control" id="user_agent_field" spellcheck="false" placeholder="User Agent">
+					</div>
+				</div>
+
+				<div class="form-group block">
+					<div class="input-group">
+						<div class="input-group-addon"><strong>C</strong></div>
+						<input type="text" class="form-control" id="cookie_field" spellcheck="false" placeholder="Cookies">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal -->
+		<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="modal-header">Please enter some text</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Please enter some text">
+						</div>
+						<button class="btn btn-primary">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery-3.4.0.slim.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/Encrypt.js"></script>
+	<script src="js/XSS.js"></script>
+	<script src="js/SQL.js"></script>
+	<script src="js/hacktools-panel.js"></script>
+</body>
+</html>

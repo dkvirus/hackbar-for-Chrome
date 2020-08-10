@@ -1,0 +1,10 @@
+{
+    "name": "hacktools",
+    "background": { "scripts": [ "background.js" ] },
+    "description": "a set of tools for Penetration test",
+    "author": "dkvirus",
+    "version": "0.0.1",
+    "devtools_page": "theme/hacktools.html",
+    "permissions": [ "tabs", "activeTab", "webRequest", "webRequestBlocking", "\u003Call_urls>", "storage" ],
+    "manifest_version":2
+}
