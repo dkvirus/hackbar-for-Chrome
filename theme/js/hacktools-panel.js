@@ -491,16 +491,16 @@ function execute() {
     let post_data = null;
     let method = 'GET';
 
-    if (enableRefererBtn.prop('checked')) {
+    if (enableRefererBtn.prop('checked') && refererField.val()) {
         Headers.referer = refererField.val();
     }
-    if (enableUserAgentBtn.prop('checked')) {
+    if (enableUserAgentBtn.prop('checked') && userAgentField.val()) {
         Headers.user_agent = userAgentField.val();
     }
-    if (enableCookieBtn.prop('checked')) {
+    if (enableCookieBtn.prop('checked') && cookieField.val()) {
         Headers.cookie = cookieField.val();
     }
-    if (enablePostBtn.prop('checked')) {
+    if (enablePostBtn.prop('checked') && postDataField.val()) {
         method = 'POST';
         post_data = getFieldFormData(postDataField.val());
     }
